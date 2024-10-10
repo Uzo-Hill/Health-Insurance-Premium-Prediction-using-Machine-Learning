@@ -1,4 +1,4 @@
-# Health Insurance Premium Prediction with Machine Learning
+# Health Insurance Premium Prediction with Machine Learning Using Python
 
 ## Objective
 The goal of this project was to predict health insurance premiums based on various personal characteristics such as age, gender, BMI, number of children, smoking habits, and region of residence.

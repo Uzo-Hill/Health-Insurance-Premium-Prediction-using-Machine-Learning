@@ -3,6 +3,12 @@
 ## Objective
 The goal of this project was to predict health insurance premiums based on various personal characteristics such as age, gender, BMI, number of children, smoking habits, and region of residence.
 
+## Skills & Tools Used:
+-  **Python libraries**: `pandas`, `numpy`, `seaborn`, `scikit-learn`
+- **Data analysis**, **feature engineering**, and **model training**,
+- **Cross-validation** for model validation
+
+
 ## Data Collection
 The dataset for this project was sourced from [Kaggle.com]([https://www.kaggle.com/mirichoi0218/insurance](https://www.kaggle.com/code/shubhamptrivedi/health-insurance-price-predict-linear-regression).  
 It contains **1,338 entries** and the following **7 columns**:

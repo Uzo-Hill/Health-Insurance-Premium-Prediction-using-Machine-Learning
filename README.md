@@ -5,7 +5,7 @@
 ![Project Banner](https://github.com/Uzo-Hill/Health-Insurance-Premium-Prediction-using-Machine-Learning/blob/main/projectimageintro.PNG)
 
 ## Objective
-The goal of this project was to predict health insurance premiums based on various personal characteristics such as age, gender, BMI, number of children, smoking habits, and region of residence.
+The goal of this project is to predict health insurance premiums based on various personal characteristics such as age, gender, BMI, number of children, smoking habits, and region of residence.
 
 ## Skills & Tools Used:
 -  **Python libraries**: `pandas`, `numpy`, `seaborn`, `scikit-learn`

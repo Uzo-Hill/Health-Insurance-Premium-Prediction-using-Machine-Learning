@@ -1,5 +1,9 @@
 # Health Insurance Premium Prediction with Machine Learning Using Python
 
+---
+
+![Project Banner](https://github.com/Uzo-Hill/Health-Insurance-Premium-Prediction-using-Machine-Learning/blob/main/projectimageintro.PNG)
+
 ## Objective
 The goal of this project was to predict health insurance premiums based on various personal characteristics such as age, gender, BMI, number of children, smoking habits, and region of residence.
 
@@ -20,14 +24,32 @@ It contains **1,338 entries** and the following **7 columns**:
 - **region**: Geographic region of residence.
 - **charges**: Annual insurance premium charged.
 
+---
+
+![DataFrame](https://github.com/Uzo-Hill/Health-Insurance-Premium-Prediction-using-Machine-Learning/blob/main/Dataset.PNG) 
+
+
 ## Exploratory Data Analysis (EDA)
 - A **heatmap** was used to visualize correlations. It revealed that **smoker** status had the strongest positive correlation with **charges** (0.79), followed by **age** (0.30) and **BMI**.
 - The target variable **charges** showed a **right-skewed distribution**, which was corrected using a **logarithmic transformation**.
+
+---
+
+![CorrelationMatrix](https://github.com/Uzo-Hill/Health-Insurance-Premium-Prediction-using-Machine-Learning/blob/main/CorrMatrix.png)
+
+---
+
+![Distribution of Smokers and Non smokers by Gender](https://github.com/Uzo-Hill/Health-Insurance-Premium-Prediction-using-Machine-Learning/blob/main/SmokersVSNonsmokers.png)
 
 ## Data Preprocessing
 - Categorical features (**sex**, **smoker**) were converted to numeric values using `map()` functions.
 - A duplicate row was detected and removed.
 - **Logarithmic transformation** was applied to the **charges** column to reduce skewedness.
+
+---
+
+![Log Transformation of Features](https://github.com/Uzo-Hill/Health-Insurance-Premium-Prediction-using-Machine-Learning/blob/main/LogTransform.png)
+
 
 ## Feature Selection
 - The **region** column was excluded from the model since it was evenly distributed and not highly correlated with **charges**.
@@ -38,6 +60,29 @@ Three machine learning models were trained:
 1. **Linear Regression**
 2. **Decision Tree Regressor**
 3. **Random Forest Regressor**
+
+---
+
+```python
+  
+  # Linear Regression
+  lr_model = LinearRegression()
+  lr_model.fit(X_train, y_train)
+  lr_pred_log = lr_model.predict(X_test)
+
+  # Decision Tree Regressor
+
+  dt_model = DecisionTreeRegressor(random_state=42)
+  dt_model.fit(X_train, y_train)
+  dt_pred_log = dt_model.predict(X_test)
+
+  # Random Forest Regressor
+
+  rf_model = RandomForestRegressor(n_estimators=100, random_state=42)
+  rf_model.fit(X_train, y_train)
+  rf_pred_log = rf_model.predict(X_test)
+
+  ```
 
 ## Model Evaluation
 The evaluation results of the models were as follows:
@@ -51,10 +96,21 @@ The evaluation results of the models were as follows:
 - **Random Forest Regressor**:
   - **MSE**: 19,916,972
   - **R²**: 0.8916
+ 
+  ---
+
+  ![Actual Vs Predicted Insurance Premium Chareges](https://github.com/Uzo-Hill/Health-Insurance-Premium-Prediction-using-Machine-Learning/blob/main/Actual%20Vs%20Predicted%20Premium%20Insurance%20Charges.png)
+
+
 
 ## Feature Importance Analysis
 - The **feature importance chart** showed that **smoker status** was the most important feature, followed by **BMI** and **age**.
 - **Children** and **sex** had minimal impact on the prediction.
+
+---
+![Feature Importance Analysis](https://github.com/Uzo-Hill/Health-Insurance-Premium-Prediction-using-Machine-Learning/blob/main/FeatureImportanceAnalysis.png)
+
+
 
 ## Model Validation
 - The **Random Forest Regressor** was validated using **5-fold cross-validation**, resulting in **cross-validated R² scores**:  

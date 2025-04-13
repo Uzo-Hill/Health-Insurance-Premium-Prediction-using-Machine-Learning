@@ -9,7 +9,7 @@ The goal of this project was to predict health insurance premiums based on vario
 
 ## Skills & Tools Used:
 -  **Python libraries**: `pandas`, `numpy`, `seaborn`, `scikit-learn`
-- **Data analysis**, **feature engineering**, and **model training**,
+- **Data analysis**, **feature engineering**, and **model training**, **Linear Regression**
 - **Cross-validation** for model validation
 
 
